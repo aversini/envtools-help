@@ -60,12 +60,12 @@ module.exports = function (grunt) {
           dest: 'tmp/help.html'
         }]
       },
-      images: {
-        files: [{
-          src: ['data/assets/images/**/*'],
-          dest: 'docs/'
-        }]
-      },
+      // images: {
+      //   files: [{
+      //     src: ['data/assets/images/**/*'],
+      //     dest: 'docs/'
+      //   }]
+      // },
       svg: {
         files: [{
           src: ['data/templates/help/envtools-svg-symbols.html'],
