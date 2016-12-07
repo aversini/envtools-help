@@ -222,7 +222,6 @@ $(function () {
 
 
   // -- S H O W T I M E
-  $('.loading').fadeOut(400, function () {
-    $('.container').fadeIn();
-  });
+  $('.loading').addClass('fade-out').addClass('hidden');
+  $('.container').addClass('fade-in').removeClass('hidden');
 });

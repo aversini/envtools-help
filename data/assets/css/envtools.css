@@ -26,6 +26,24 @@
   }
 }
 
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 @keyframes loadingLoading {
   0% {
     background-color: #fff
@@ -69,6 +87,14 @@ html {
   margin-left: auto;
   margin-right: auto;
   width: 740px;
+}
+
+.envtools-help .fade-in {
+  animation: fadein 400ms;
+}
+
+.envtools-help .fade-out {
+  animation: fadeout 400ms;
 }
 
 .envtools-help .loading {
@@ -194,7 +220,7 @@ html {
 }
 
 .envtools-help .hidden {
-  display: none;
+  opacity: 0;
 }
 
 .envtools-help h2 {
