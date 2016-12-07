@@ -144,7 +144,7 @@ module.exports = function (grunt) {
       },
       js: {
         src: [
-          'data/assets/js/jquery-3.1.1.min.js',
+          'data/assets/js/jquery-3.1.1.slim.min.js',
           'data/assets/js/jquery.highlight.js',
           'data/assets/js/highlight.pack.js',
           'data/assets/js/bootstrap.min.js',
@@ -176,11 +176,9 @@ module.exports = function (grunt) {
   });
 
   // register multi-tasks aliases
-  grunt.registerTask('default', ['help-generate']);
+  grunt.registerTask('default', ['clean', 'gitclone', 'help-generate']);
 
   grunt.registerTask('help-generate', [
-    'clean',
-    'gitclone',
     'copy',
     'lunrjs-index',
     'help-json-data',
