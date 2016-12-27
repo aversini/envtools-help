@@ -11,8 +11,6 @@ module.exports = function (grunt) {
 
   // project configuration
   grunt.initConfig({
-    // 'pkg': grunt.file.readJSON('tmp/repo/envtools/package.json'),
-
     'clean': ['./tmp/*', 'docs/index.html'],
 
     'gitclone': {
@@ -177,6 +175,7 @@ module.exports = function (grunt) {
 
   // register multi-tasks aliases
   grunt.registerTask('default', ['clean', 'gitclone', 'help-generate']);
+
 
   grunt.registerTask('help-generate', [
     'copy',
