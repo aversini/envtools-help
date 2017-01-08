@@ -147,7 +147,7 @@ module.exports = function (grunt) {
           'data/assets/js/highlight.pack.js',
           'data/assets/js/bootstrap.min.js',
           'data/assets/js/lunr.min.js',
-          'data/assets/js/envtools.js'
+          'tmp/envtools.min.js'
         ],
         dest: 'tmp/bundle.js'
       }
@@ -170,12 +170,21 @@ module.exports = function (grunt) {
           'tmp/highlight-min.css': ['data/assets/css/highlight/default.css']
         }
       }
+    },
+
+    'uglify': {
+      target: {
+        files: {
+          'tmp/envtools.min.js': ['data/assets/js/envtools.js']
+        }
+      }
     }
   });
 
   // register multi-tasks aliases
   grunt.registerTask('default', ['clean', 'gitclone', 'help-generate']);
 
+  grunt.registerTask('doc', ['help-generate']);
 
   grunt.registerTask('help-generate', [
     'copy',
@@ -184,6 +193,7 @@ module.exports = function (grunt) {
     'markdown:rawHistory',
     'autoprefixer',
     'cssmin',
+    'uglify',
     'concat:js',
     'concat:css',
     'import',
