@@ -146,7 +146,7 @@ $ envtools decrypt -f encrypted-file.txt -o plain-file.txt -p sekret
   Mac supports both the default notification and Growl, but you need to <a href="http://growl.info/downloads" target="_blank">install and start Growl  manually</a>.
 </p>
 <p>
-  Windows only supports Growl and you also need to <a href="http://www.growlforwindows.com/gfw/default.aspx" target="_blank">install and start Growl manually</a>.
+  Windows also supports Growl and you also need to <a href="http://www.growlforwindows.com/gfw/default.aspx" target="_blank">install and start Growl manually</a>.
 </p>
 <h4>Options</h4>
 <pre>
@@ -166,10 +166,6 @@ $ envtools decrypt -f encrypted-file.txt -o plain-file.txt -p sekret
   can be found in the System Preferences under Sound->Sound Effects.
   Default sound is Purr.
 
---notifier <growl|osx>
-  Use this flag to choose the OS notifier.
-  Available options are "growl" or "osx".
-  Default notifier is "osx".
 </pre>
 <h4>Examples</h4>
 <pre>
@@ -187,15 +183,9 @@ $   envtools notifier --type SUCCESS --message 'Build is done!'
 </p>
 <h4>Parameter</h4> Envtools timer takes only one parameter with the following format: XhYmZs, e.g. 4h2m15s or 1m42s
 
-<h4>Options</h4>
-<pre>--quiet ....... Cancel all notifications.
---notifier .... Specify a notifier [growl|osx].
-</pre>
 <h4>Examples</h4>
 <pre>
 $ envtools timer 1m3s
-$ envtools timer 1m3s --quiet
-$ envtools timer 1m3s --notifier growl
 </pre>
 
 <h2 id="envtools-config">Config</h2>
