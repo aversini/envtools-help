@@ -83,7 +83,7 @@
   }, {
     "title": "Which version of nvm is being installed?",
     "tags": ["nvm"],
-    "content": "<p>The version of <a href=\"https://github.com/creationix/nvm\" target=\"_blank\">nvm</a> installed via <code>envtools extra</code> is <strong>0.32.0</strong> </p>",
+    "content": "<p>The version of <a href=\"https://github.com/creationix/nvm\" target=\"_blank\">nvm</a> installed via <code>envtools extra</code> is <strong>0.33.2</strong> </p>",
     "id": "faq-behind-4",
     "group": "faq-behind"
   }, {
