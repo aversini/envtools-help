@@ -47,6 +47,13 @@
     "id": "faq-7",
     "group": "faq-general"
   },
+  {
+    "title": "Is there a way to use another NPM/Yarn registry?",
+    "tags": ["registry", "npm", "yarn", "proxy"],
+    "content": "<p>Yes! Simply set the environment variable <code>CUSTOM_NPM_REGISTRY</code> to the url of your choosing (including http) and Envtools will take it into account when dealing with NPM and Yarn. You can also choose not to use proxies in your npm configuration. To do so, simply set the environment variable <code>CUSTOM_NPM_REGISTRY_PROXY</code> to off.</p>",
+    "id": "faq-8",
+    "group": "faq-general"
+  },
 
 
   {
