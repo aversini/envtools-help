@@ -63,6 +63,11 @@
       <span class="toc-dots"></span>
       <span class="toc-body">Miscellaneous system information</span>
     </a>
+    <a class="toc-row" href="#" data-id="envtools-registry">
+      <span class="toc-head">Registry</span>
+      <span class="toc-dots"></span>
+      <span class="toc-body">NPM/Yarn registry manager</span>
+    </a>
     <a class="toc-row" href="#" data-id="envtools-lite">
       <span class="toc-head">Lite</span>
       <span class="toc-dots"></span>
@@ -250,6 +255,15 @@ $ envtools timer 1m3s
   To hide a data point, use the negation, e.g. <code>envtools info --no-uptime</code>
 </p>
 <img src="data/assets/images/info/envtools-info-compressed.png" height="667" width="661" role="presentation" />
+
+<h2 id="envtools-registry">Registry</h2>
+<code>envtools registry</code>
+<p>
+  This command allows you to display and handle your NPM/Yarn registry configurations. If you need to switch between different registries - for example at work or at home, you can create "Profiles" that will hold your multiple configurations and allow you to switch from one to another in total simplicity.
+</p>
+<p>
+  The commands always displays the current configuration. If you already have created some Profiles, they will also be displayed. Otherwise, you will be prompted to create one. You will also be asked if you want to update the registry itself and if proxies should be used.
+</p>
 
 <h2 id="envtools-lite">Lite</h2>
 <code>envtools lite</code>

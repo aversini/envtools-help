@@ -98,6 +98,12 @@
     "content": "<p><strong>NOTE:</strong> this only applies to macOS.</p><p>Sometimes the screensaver configuration files can become corrupted or un-writable which means that no matter what changes you make in the <em>System Preferences->Desktop & Screen Saver</em>, they are not going to persist. The next time you reboot, your changes will be lost. This is where Envtools tries to fix this issue by simply wiping out the screensaver configuration files under <code class=\"code-ellispis\">$HOME/Library/Preferences/ByHost/com.apple.screensaver*.*</code></p>",
     "id": "faq-behind-6",
     "group": "faq-behind"
+  }, {
+    "title": "Where are the NPM/Yarn Profiles saved? Can I remove them?",
+    "tags": ["profile", "npm", "npmrc", "yarn", "yarnrc", "registry"],
+    "content": "<p>The command <code>envtools registry</code> allows you to create Profiles to save your NPM/Yarn configuration. Profiles that hold your NPM/Yarn configurations are saved under <code>$HOME/.envtools/npmrcs/name-of-the-profile/</code>. Under the profile folder, you will find at most 2 files: <code>npmrc</code> and <code>yarnrc</code> which are exact copies of your <code>$HOME/.npmrc</code> and <code>$HOME/.yarnrc</code> files respectively.</p><p>There is an index file that keeps track of all those profiles as well as which one is currently in used. The file is <code>$HOME/.envtools/npmrcs.json</code></p><p>To remove a Profile, you can either override it via <code>envtools registry</code> or remove it from the index file.</p>",
+    "id": "faq-behind-7",
+    "group": "faq-behind"
   }
 
 ]
