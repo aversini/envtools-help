@@ -252,6 +252,14 @@ html {
   margin: 0 0;
 }
 
+#history .badges {
+  padding-bottom: 10px;
+}
+
+#history .badges a {
+  padding-right: 5px;
+}
+
 .envtools-help .envtools-input-with-icon {
   position: relative;
 }

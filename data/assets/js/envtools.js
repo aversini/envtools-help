@@ -3,7 +3,6 @@
 
 var EnvtoolsHelpLoader = (function () {
   var
-    version,
     allFaqContent,
     allFaqEntries,
     faqTOCcontent,
@@ -80,7 +79,6 @@ var EnvtoolsHelpLoader = (function () {
     data = $('#envtools-data').html();
     if (data) {
       dataJson = JSON.parse(data);
-      version = (dataJson) ? dataJson.version : null;
     }
 
     // save the tab location from the url location if any
@@ -99,11 +97,6 @@ var EnvtoolsHelpLoader = (function () {
 
   // -- U I  I N I T I A L I Z A T I O N
   function initUI() {
-    // show version in footer if found
-    if (version) {
-      $('.envtools-footer .envtools-version').html('v' + version + ' - ');
-    }
-
     // hide content for mac if not a mac browser
     if (navigator.userAgent.match(/mac os x/i)) {
       $('.mac-only').removeClass('mac-only');
@@ -127,8 +120,8 @@ var EnvtoolsHelpLoader = (function () {
         var
           tagEl = $('<div class="faq-tags">'),
           el = $('<div id="' + faq.id + '" class="faq-entry">')
-          .append($('<p class="h3 faq-title">').text(faq.title))
-          .append($('<div class="faq-content">').html(faq.content));
+            .append($('<p class="h3 faq-title">').text(faq.title))
+            .append($('<div class="faq-content">').html(faq.content));
         if (faq.tags && faq.tags.length) {
           tagEl.append(faq.tags.sort().map(function (tag) {
             return $('<span class=" faq-tag-badge badge">').text(tag);
