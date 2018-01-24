@@ -76,12 +76,6 @@ module.exports = function (grunt) {
           dest: 'tmp/envtools-faq.html'
         }]
       },
-      sinopia: {
-        files: [{
-          src: ['data/templates/help/envtools-sinopia.html'],
-          dest: 'tmp/envtools-sinopia.html'
-        }]
-      },
       custom: {
         files: [{
           src: ['data/templates/help/envtools-custom.html'],
