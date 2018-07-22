@@ -73,37 +73,62 @@
       <span class="toc-dots"></span>
       <span class="toc-body">Generate a portable Envtools</span>
     </a>
+    <a class="toc-row" href="#" data-id="envtools-color">
+      <span class="toc-head">Color</span>
+      <span class="toc-dots"></span>
+      <span class="toc-body">Find closest human-readable name to hex color</span>
+    </a>
+    <a class="toc-row" href="#" data-id="envtools-md2html">
+      <span class="toc-head">Md2Html</span>
+      <span class="toc-dots"></span>
+      <span class="toc-body">Convert markdown to HTML</span>
+    </a>
   </div>
 </nav>
 
 <h2 id="envtools-auto">Auto</h2>
 <code>envtools auto</code>
 <p>Use this command to bootstrap your environment automatically.</p>
-<p>This command <em>should</em> rarely be used. Its goal is to set up and initialize a working environment for your terminal sessions. This is a step-by-step process (see the opposite option: manual) where all the available bootstrap options are being executed one after the other. You will be prompted for each options and you can bypass the ones you feel you do not need. This command allows you to load useful aliases, set your proxy, setup your git and npm configurations, etc.</p>
+<p>This command
+  <em>should</em> rarely be used. Its goal is to set up and initialize a working environment for your terminal sessions. This
+  is a step-by-step process (see the opposite option: manual) where all the available bootstrap options are being executed
+  one after the other. You will be prompted for each options and you can bypass the ones you feel you do not need. This command
+  allows you to load useful aliases, set your proxy, setup your git and npm configurations, etc.</p>
 
 <h2 id="envtools-manual">Manual</h2>
 <code>envtools manual</code>
 <p>Use this command to bootstrap your environment manually.</p>
-<p>This command allows you to choose which step to run manually. It offers the same steps that are being executed with <code>envtools auto</code>, but with the flexibility to choose which one you need. It is most useful for an environment that has been bootstrapped before, but needs to be reconfigured one way or another after a while (fix user permissions, re-install core node packages, new version of Envtools, etc.)</p>
+<p>This command allows you to choose which step to run manually. It offers the same steps that are being executed with
+  <code>envtools auto</code>, but with the flexibility to choose which one you need. It is most useful for an environment that has been bootstrapped
+  before, but needs to be reconfigured one way or another after a while (fix user permissions, re-install core node packages,
+  new version of Envtools, etc.)</p>
 
 <h2 id="envtools-extra">Extra</h2>
 <code>envtools extra</code>
 <p>Install and configure some extra goodies that are not included in the manual/automatic bootstrap routines.</p>
 <ul>
   <li>
-    Install some <code>Atom</code> core packages.
+    Install some
+    <code>Atom</code> or
+    <code>VS Code</code>core packages.
   </li>
   <li class="mac-only">
-    Install and configure Node Version Manager (<code>nvm</code>) which is a simple bash script to manage multiple active node.js versions. <a href="https://github.com/creationix/nvm/blob/master/README.markdown" target="_blank">Please see the nvm readme</a> for more information.
+    Install and configure Node Version Manager (
+    <code>nvm</code>) which is a simple bash script to manage multiple active node.js versions.
+    <a href="https://github.com/creationix/nvm/blob/master/README.markdown" target="_blank">Please see the nvm readme</a> for more information.
   </li>
   <li class="mac-only">
-    Install a <code>Custom Terminal Theme</code>. It was built to use more subtle colors that are better suited when using a dark terminal. The background is black.
+    Install a
+    <code>Custom Terminal Theme</code>. It was built to use more subtle colors that are better suited when using a dark terminal. The background is black.
   </li>
   <li class="mac-only">
-    Install some <code>QuickLook Plugins</code>. For example in the Finder, pressing on the SPACE bar when selecting a .zip or .pkg file would open a tree preview of the content of the packages... You need this.
+    Install some
+    <code>QuickLook Plugins</code>. For example in the Finder, pressing on the SPACE bar when selecting a .zip or .pkg file would open a tree preview of
+    the content of the packages... You need this.
   </li>
   <li class="mac-only">
-    Fix Mac screensaver files permissions. If you are changing your screensaver settings and realize that after a while, they are reset to the previous values, you need this fix.
+    Fix Mac screensaver files permissions. If you are changing your screensaver settings and realize that after a while, they
+    are reset to the previous values, you need this fix.
   </li>
   <li>
     More goodies are added regularly...
@@ -113,19 +138,25 @@
 <h2 id="envtools-web">Web</h2>
 <code>envtools web</code>
 <p>
-  Start a simple static web server that will serve the current folder. Use <code>--port [port-num]</code> to specify a different port than 8080.
+  Start a simple static web server that will serve the current folder. Use
+  <code>--port [port-num]</code> to specify a different port than 8080.
 </p>
 
 <h2 id="envtools-smtp">SMTP</h2>
 <code>envtools smtp</code>
 <p>
-  Start a simple SMTP server that will listen for incoming email requests on port 1024 by default and print them on the console. Use <code>--port [port-num]</code> to specify a different port than 1024. Use <code>--verbose</code> to add more server logs. Useful to debug email notifications without having to rely on an external email server.
+  Start a simple SMTP server that will listen for incoming email requests on port 1024 by default and print them on the console.
+  Use
+  <code>--port [port-num]</code> to specify a different port than 1024. Use
+  <code>--verbose</code> to add more server logs. Useful to debug email notifications without having to rely on an external email server.
 </p>
 
 <h2 id="envtools-crypto">Encrypt, decrypt</h2>
-<code>envtools encrypt</code> | <code>envtools decrypt</code>
+<code>envtools encrypt</code> |
+<code>envtools decrypt</code>
 <p>
-  Simple command line tool that allows you to encrypt or decrypt a file with a password. The encryption algorithm used is AES-256-CTR. <a href="https://en.wikipedia.org/wiki/Advanced_Encryption_Standard" target="_blank">You can learn about this algorithm here</a>.
+  Simple command line tool that allows you to encrypt or decrypt a file with a password. The encryption algorithm used is AES-256-CTR.
+  <a href="https://en.wikipedia.org/wiki/Advanced_Encryption_Standard" target="_blank">You can learn about this algorithm here</a>.
 </p>
 <h4>Options</h4>
 <pre>-f .... The input file.
@@ -142,13 +173,16 @@ $ envtools decrypt -f encrypted-file.txt -o plain-file.txt -p sekret
 <h2 id="envtools-notifier">Notifier</h2>
 <code>envtools notifier</code>
 <p>
-  Simple command line notifier using either macOS or Growl notification mechanisms. Useful when combined with another long running process for example.
+  Simple command line notifier using either macOS or Growl notification mechanisms. Useful when combined with another long
+  running process for example.
 </p>
 <p>
-  Mac supports both the default notification and Growl, but you need to <a href="http://growl.info/downloads" target="_blank">install and start Growl  manually</a>.
+  Mac supports both the default notification and Growl, but you need to
+  <a href="http://growl.info/downloads" target="_blank">install and start Growl manually</a>.
 </p>
 <p>
-  Windows also supports Growl and you also need to <a href="http://www.growlforwindows.com/gfw/default.aspx" target="_blank">install and start Growl manually</a>.
+  Windows also supports Growl and you also need to
+  <a href="http://www.growlforwindows.com/gfw/default.aspx" target="_blank">install and start Growl manually</a>.
 </p>
 <h4>Options</h4>
 <pre>
@@ -193,15 +227,21 @@ $ envtools timer 1m3s
 <h2 id="envtools-config">Config</h2>
 <code>envtools config</code>
 <p>
-  Use this command to configure Envtools. If you ran <code>envtools auto</code>, Envtools was bootstraped with a default configuration. You can customize that configuration here. There are several customization levels:
+  Use this command to configure Envtools. If you ran
+  <code>envtools auto</code>, Envtools was bootstraped with a default configuration. You can customize that configuration here. There are several customization
+  levels:
 </p>
 <div class="h4">Level 1</div>
 <p>
-  Choose to load Envtools automatically at each terminal session. If you disable this option, you will not be prompted for anything else. Deactivating this options means that Envtools will remove itself from your <code>.profile</code> files. Even though Envtools the node package is still installed, you will not benefit from any terminal environment customization (aliases, prompt, etc.)
+  Choose to load Envtools automatically at each terminal session. If you disable this option, you will not be prompted for
+  anything else. Deactivating this options means that Envtools will remove itself from your
+  <code>.profile</code> files. Even though Envtools the node package is still installed, you will not benefit from any terminal environment customization
+  (aliases, prompt, etc.)
 </p>
 <div class="h4">Level 2</div>
 <p>
-  If on the other hand you decided to load Envtools at each session at the previous level, you will then be asked if you want to also load Envtools custom prompt (the information displayed on the prompt just before the caret).
+  If on the other hand you decided to load Envtools at each session at the previous level, you will then be asked if you want
+  to also load Envtools custom prompt (the information displayed on the prompt just before the caret).
 </p>
 <div class="h4">Level 3</div>
 <p>
@@ -221,42 +261,54 @@ $ envtools timer 1m3s
 </p>
 <div class="h4">Level 5</div>
 <p>
-  At this level you can allow Envtools to check periodically (once a day) if a new version is available. If a new version is available, a notice will be displayed once a day after executing most Envtools commands.
+  At this level you can allow Envtools to check periodically (once a day) if a new version is available. If a new version is
+  available, a notice will be displayed once a day after executing most Envtools commands.
 </p>
 
 <h2 id="envtools-update">Update</h2>
 <code>envtools update</code>
 <p>
-  Use this command to display update information. If you configured Envtools to check for new version automatically, the result can be displayed by this command (without having to wait for Envtools to show it to you once in a while).
+  Use this command to display update information. If you configured Envtools to check for new version automatically, the result
+  can be displayed by this command (without having to wait for Envtools to show it to you once in a while).
 </p>
 
 <h2 id="envtools-info">Info</h2>
 <code>envtools info</code>
 <p>Use this command to show some useful system information.</p>
 <p>
-  Depending on the OS, this commands displays a few data points like the total amount of time the system has been running, the type of CPU, the memory (total and free), the local and public IP addresses, proxy data, as well as a few environment versions like node (along with the corresponding v8 and module number), npm and git, to name a few.
+  Depending on the OS, this commands displays a few data points like the total amount of time the system has been running,
+  the type of CPU, the memory (total and free), the local and public IP addresses, proxy data, as well as a few environment
+  versions like node (along with the corresponding v8 and module number), npm and git, to name a few.
 </p>
 <p>
   By default, all data will be gathered except the public IP since it could take some time.
 </p>
 <p>
-  Use the flag <code>--publicIp</code> to show it as well.
+  Use the flag
+  <code>--publicIp</code> to show it as well.
 </p>
 <p>
-  Available options are: <code>all, os, uptime, cpu, load, memory, hostname, localIp, publicIp, proxy, </code> and <code>disk</code>
+  Available options are:
+  <code>all, os, uptime, cpu, load, memory, hostname, localIp, publicIp, proxy, </code> and
+  <code>disk</code>
 </p>
 <p>
-  To hide a data point, use the negation, e.g. <code>envtools info --no-uptime</code>
+  To hide a data point, use the negation, e.g.
+  <code>envtools info --no-uptime</code>
 </p>
 <img src="data/assets/images/info/envtools-info-compressed.png" height="667" width="661" role="presentation" />
 
 <h2 id="envtools-registry">Registry</h2>
 <code>envtools registry</code>
 <p>
-  This command allows you to display and handle your NPM/Yarn registry configurations. If you need to switch between different registries - for example at work or at home, you can create "Profiles" that will hold your multiple configurations and allow you to switch from one to another in total simplicity.
+  This command allows you to display and handle your NPM/Yarn registry configurations. If you need to switch between different
+  registries - for example at work or at home, you can create "Profiles" that will hold your multiple configurations and
+  allow you to switch from one to another in total simplicity.
 </p>
 <p>
-  The commands always displays the current configuration. If you already have created some Profiles, they will also be displayed. Otherwise, you will be prompted to create one. You will also be asked if you want to update the registry itself and if proxies should be used.
+  The commands always displays the current configuration. If you already have created some Profiles, they will also be displayed.
+  Otherwise, you will be prompted to create one. You will also be asked if you want to update the registry itself and if
+  proxies should be used.
 </p>
 
 <h2 id="envtools-lite">Lite</h2>
@@ -265,7 +317,9 @@ $ envtools timer 1m3s
   This command will create a compressed file under the current folder.
 </p>
 <p>
-  It contains a very limited subset of Envtools, the bare minimum to at least have a decent prompt, as well as a few core aliases (ll, etc.). It does not have any of Envtools node capabilities since the package only contains shell scripts helpers. It is useful if you need to work in a remote server that does not have node/npm but can execute bash scripts.
+  It contains a very limited subset of Envtools, the bare minimum to at least have a decent prompt, as well as a few core aliases
+  (ll, etc.). It does not have any of Envtools node capabilities since the package only contains shell scripts helpers. It
+  is useful if you need to work in a remote server that does not have node/npm but can execute bash scripts.
 </p>
 <h3>How to use it</h3>
 <ol>
@@ -300,3 +354,47 @@ $ envtools timer 1m3s
 <p>
   That's it! Just reload your environment and you should have a better prompt already.
 </p>
+
+<h2 id="envtools-color">Color</h2>
+<code>envtools color</code>
+<p>
+  Simple command line to convert hexadecimal colors into the closest human readable name (based on CSS definitions).
+</p>
+
+<h4>Parameter</h4>
+Envtools color takes only one parameter with the following format: '#xxxxxx'
+
+<h4>Examples</h4>
+<pre>
+$ envtools color '#008000'
+
+Color name       : Green
+Color hexa code  : #008000
+Color RGBA code  : rgba(0,128,0,1)
+SASS definition  : $color-green: #008000;
+Color precision  : Exact
+</pre>
+
+<pre>
+$ envtools color '#fffff1'
+
+Color name       : Ivory
+Color hexa code  : #fffff1
+Color RGBA code  : rgba(255,255,241,1)
+SASS definition  : $color-ivory: #fffff1;
+Color precision  : Approximate
+</pre>
+
+<h2 id="envtools-md2html">Markdown to HTML</h2>
+<code>envtools md2html</code>
+<p>
+  Simple command line to convert a markdown file to HTML. The HTML result is printed on the standard output.
+</p>
+<h4>Options</h4>
+<pre>-f .... The input markdown file.</pre>
+
+<h4>Examples</h4>
+<pre>
+$ envtools md2html -f CHANGELOG.md
+$ envtools md2html -f README.md
+</pre>
