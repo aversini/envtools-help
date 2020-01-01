@@ -10,3 +10,5 @@ tmp
 *.sublime-workspace
 *.sublime-project
 /index-inlined.html
+
+yarn.lock
