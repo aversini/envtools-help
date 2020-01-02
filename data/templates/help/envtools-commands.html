@@ -138,9 +138,24 @@
 <h2 id="envtools-web">Web</h2>
 <code>envtools web</code>
 <p>
-  Start a simple static web server that will serve the current folder. Use
-  <code>--port [port-num]</code> to specify a different port than 8080.
+  Start a simple, zero-configuration command-line http server.
 </p>
+<h4>Options</h4>
+<pre>
+-c, --cache    .... Time in milliseconds for caching files.
+-C, --cors     .... Setup * CORS headers to allow requests from any origin.
+-h, --help     .... Output usage information.
+-o, --open     .... Open in your default browser.
+-l, --logs     .... Print http requests.
+-p, --port     .... Port to listen on - Will try next available if already used.
+-u, --unzipped .... Disable GZIP compression.
+</pre>
+<h4>Examples</h4>
+<pre>
+$ envtools web public/
+$ envtools -c 3600 -o -l -p 3201 dist/
+</pre>
+
 
 <h2 id="envtools-smtp">SMTP</h2>
 <code>envtools smtp</code>
