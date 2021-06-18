@@ -27,7 +27,7 @@
     "grunt-markdown": "^0.7.0",
     "load-grunt-tasks": "^4.0.0",
     "lunr": "^0.7.2",
-    "striptags": "^3.1.1"
+    "striptags": "^3.2.0"
   },
   "keywords": [
     "envtools-help"
